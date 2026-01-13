@@ -18,10 +18,10 @@ git clone https://github.com/ruurti/redis-sample
 ### Cài đặt 
 
 ```shell
-cd alone && docker compose up --build -d
+cd redis_alone && docker compose up --build -d
 ```
 
-[Xem thêm](./alone/README.md)
+[Xem thêm](./redis_alone/README.md)
 
 ---
 
@@ -30,10 +30,10 @@ cd alone && docker compose up --build -d
 ### Cài đặt
 
 ```shell
-cd cluster && docker compose up --build -d
+cd redis_cluster && docker compose up --build -d
 ```
 
-[Xem thêm](./cluster/README.md)
+[Xem thêm](./redis_cluster/README.md)
 
 ---
 
