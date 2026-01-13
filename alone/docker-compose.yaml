@@ -1,0 +1,22 @@
+services:
+  redis_offical:
+    image: redis:latest
+    ports:
+      - 6379:6379
+    command: redis-server --protected-mode no
+  
+  # redis_bitnami:
+  #   image: bitnamilegacy/redis:latest
+  #   ports:
+  #     - 16379:6379
+  #   environment:
+  #     - ALLOW_EMPTY_PASSWORD=yes
+
+  redis_insight:
+    image: redis/redisinsight:latest
+    ports:
+      - 5540:5540
+    environment:
+      - RI_PRE_SETUP_DATABASES_PATH=/redisinsight/connections.json
+    volumes:
+      - ./connections.json:/redisinsight/connections.json

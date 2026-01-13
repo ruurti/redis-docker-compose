@@ -1,0 +1,9 @@
+services:
+  redis_insight:
+    image: redis/redisinsight:latest
+    ports:
+      - 5540:5540
+    environment:
+      - RI_PRE_SETUP_DATABASES_PATH=/redisinsight/connections.json
+    volumes:
+      - ./connections.json:/redisinsight/connections.json
